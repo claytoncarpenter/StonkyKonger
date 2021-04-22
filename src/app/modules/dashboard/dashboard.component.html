@@ -1,0 +1,35 @@
+<div>
+    <app-widget-chart *ngIf="show"></app-widget-chart>
+</div>
+
+<br>
+
+<mat-divider *ngIf="show"></mat-divider>
+
+<br>
+
+<div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="20px" class="stats-cards" *ngIf="show">
+    <mat-card fxFlex="25">
+        <app-widget-card label="Volume" total="19k" percentage="29"></app-widget-card>
+    </mat-card>
+    <mat-card fxFlex="25">
+        <app-widget-card label="Options" total="56k" percentage="59"></app-widget-card>
+    </mat-card>
+    <mat-card fxFlex="25">
+        <app-widget-card label="Stock Price" total="19.23" percentage="88"></app-widget-card>
+    </mat-card>
+    <mat-card fxFlex="25">
+        <app-widget-card label="Theta Gang" total="9k" percentage="11"></app-widget-card>
+    </mat-card>
+</div>
+
+<br>
+
+<mat-divider *ngIf="show"></mat-divider>
+
+<br>
+
+<div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="20px" *ngIf="show">
+    <div fxFlex="60"><app-widget-card style="height:400px"></app-widget-card></div>
+    <div fxFlex="40"><app-widget-chart></app-widget-chart></div>
+</div>
