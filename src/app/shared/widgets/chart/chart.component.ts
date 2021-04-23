@@ -19,6 +19,7 @@ export class ChartComponent implements OnInit {
   constructor(private stockService: StockService) { }
 
   updateTitle(data:string) {
+    this.stock = data;
     this.chartOptions = {
       title: {
         text: data
@@ -27,11 +28,9 @@ export class ChartComponent implements OnInit {
   }
 
   ngOnInit(): void {
-
     this.stockService.fetchStock().subscribe((data) => {
       this.updateTitle(data);
     })
-    
 
     this.chartOptions = {
       credits: {
